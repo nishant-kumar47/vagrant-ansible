@@ -1,7 +1,8 @@
-   - name: Install pip
-     yum:
-       name: python-pip
-       state: present
+  #removing pip installation part as its already installed in Vagrnatfile.
+  # - name: Install pip
+  #   yum:
+   #    name: python-pip
+   #    state: present
    - name: Installing requirements
      pip:
        requirements: "{{ installation_dir }}/requirements.txt"
