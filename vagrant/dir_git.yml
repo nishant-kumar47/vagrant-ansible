@@ -1,0 +1,19 @@
+   - name: Creates directory
+     file:
+       path: "{{ item }}"
+       state: directory
+       mode: 0775
+       recurse: yes
+     with_items:
+       - "{{ installation_dir }}"
+       - "{{ log_dir }}"
+   - name: Install git
+     yum:
+       name: git
+       state: present
+   - name: Checking out required git repo
+     git:
+       repo: https://bitbucket.org/azneita/devops-challenge.git
+       dest: "{{ installation_dir }}"
+       version: master
+       force: yes

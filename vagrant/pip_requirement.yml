@@ -1,0 +1,12 @@
+   - name: Install pip
+     yum:
+       name: python-pip
+       state: present
+   - name: Installing requirements
+     pip:
+       requirements: "{{ installation_dir }}/requirements.txt"
+   - name: Change Timzone of machine to UTC
+     timezone:
+       name: UTC
+
+  

@@ -1,0 +1,14 @@
+[Unit]
+Description=App python
+After=multi-user.target[Service]
+
+Type=idle
+[Service]
+User={{ username }}
+Group={{ username }}
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=app
+#ExecStart=/usr/bin/python {{ installation_dir }}/app.py 1>> /tmp/app.log 2>>/tmp/app.log
+ExecStart=/usr/bin/python {{ installation_dir }}/app.py
+Restart=always

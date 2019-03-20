@@ -1,0 +1,9 @@
+{{ log_dir }}/*.log {
+    maxsize 50M
+    hourly
+    missingok
+    rotate 8
+    compress
+    notifempty
+    nocreate
+}

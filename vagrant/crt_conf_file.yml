@@ -1,0 +1,21 @@
+- name: Copy app.config to systemd location
+  template:
+    src: files/app.j2
+    dest: /lib/systemd/system/app.service
+    owner: root
+    group: root
+    mode: 0644
+- name: Copy log file to rsyslog location
+  template:
+    src: files/syslog_app.j2
+    dest: /etc/rsyslog.d/app.conf
+    owner: root
+    group: root
+    mode: 0644
+- name: Copy log rotate
+  template:
+    src: files/log_rotate.j2
+    dest: /etc/logrotate.d/app
+    owner: root
+    group: root
+    mode: 0644

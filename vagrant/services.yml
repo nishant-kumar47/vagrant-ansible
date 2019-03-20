@@ -1,0 +1,9 @@
+- name: Restart rsyslogd
+  service:
+    name: rsyslog
+    state: restarted
+- name: Start app,only when there is no process as app running
+  service:
+    name: app
+    pattern: "{{ installation_dir }}/app.py"
+    state: started
