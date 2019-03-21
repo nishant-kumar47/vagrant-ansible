@@ -1,3 +1,7 @@
+---
+# file: pip.yml
+#
+
   #removing pip installation part as its already installed in Vagrnatfile.
   # - name: Install pip
   #   yum:

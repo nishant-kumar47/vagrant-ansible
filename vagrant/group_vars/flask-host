@@ -1,0 +1,3 @@
+username: flask
+installation_dir: /webapps/devops
+log_dir: /var/log/flask_app

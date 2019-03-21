@@ -79,7 +79,7 @@ end
   #   apt-get install -y apache2
   # SHELL
   config.vm.provision "ansible_local" do |ansible|
-    ansible.playbook = "playbook.yml"
+    ansible.playbook = "site.yml"
     ansible.install_mode = "pip"
   end
 end
