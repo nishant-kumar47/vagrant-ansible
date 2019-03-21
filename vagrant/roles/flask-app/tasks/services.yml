@@ -1,3 +1,6 @@
+---
+# file: services.yml
+#
 - name: Restart rsyslogd
   service:
     name: rsyslog

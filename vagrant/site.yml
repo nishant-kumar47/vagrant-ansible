@@ -1,0 +1,17 @@
+
+- hosts: all
+  become: yes 
+
+  roles:
+    - common
+
+
+
+- hosts: flask-host
+  become: yes
+
+  roles:
+    - flask-app
+#  tasks:
+#   - include: firewalld.yml
+#   - include: services.yml

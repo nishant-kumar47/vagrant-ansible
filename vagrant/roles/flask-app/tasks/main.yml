@@ -1,0 +1,5 @@
+---
+# These tasks are responsible for starting the required service
+
+  - include: services.yml
+  - include: firewalld.yml

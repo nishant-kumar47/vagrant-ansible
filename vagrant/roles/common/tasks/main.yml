@@ -1,0 +1,7 @@
+---
+# file: common/main.yml
+ - include: add_user.yml
+ - include: dir_git.yml
+ - include: pip_requirement.yml
+ - include: crt_conf_file.yml 
+#

@@ -1,7 +1,10 @@
+---
+# file: firewalld.yml
+
 - name: Enable firewalld
   service: name=firewalld state=started enabled=yes
   
-- name: Redirect port 80 to 5000 with Rich Rule
+- name: Redirect port 500 to 500 with Rich Rule
   firewalld:
     rich_rule: rule family={{ item }} forward-port port=80 protocol=tcp to-port=5000
     zone:      public
@@ -11,5 +14,7 @@
   with_items:
     - ipv4
     - ipv6
-- name: Bounce firewalld
-  service: name=firewalld state=restarted
+- name: restart firewalld
+  service:
+    name: firewalld
+    state: restarted

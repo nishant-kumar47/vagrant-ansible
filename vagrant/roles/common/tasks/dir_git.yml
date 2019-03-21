@@ -1,3 +1,6 @@
+---
+# file: git_dir.yml
+#
    - name: Creates directory
      file:
        path: "{{ item }}"
